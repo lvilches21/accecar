@@ -1,0 +1,26 @@
+extends ../layout.jade
+block contenido
+	div(class="centro")
+		h1 Agregar Productos
+		form(method="post" action="/" style="margin-top:1.5em;" enctype="multipart/form-data")
+			div
+				label(style="margin-top:1.5em;") NOMBRE
+				input(type="text" name="title" placeholder="Nombre Del Producto" required)
+			div
+				label(style="margin-top:1.5em;") DESCRIPCION
+				textarea(name="description" placeholder="Descripcion Del Producto" required)
+			div
+				label(style="margin-top:1.5em;") PRECIO
+				input(type="number" name="pricing" placeholder="Precio Del Producto" required)
+			div
+				label(style="margin-top:1.5em;") IMAGEN DEL PRODUCTO 
+				input(type="file" name="image_avatar" required)
+			div
+				label(style="margin-top:1.5em;") CONTRASEÑA
+				input(type="password" name="password" placeholder="Contraseña" required)
+			div
+				input(type="submit" value="Agregar Producto" style="margin-top:1.5em;" class="special")
+			div
+				ul(class="actions float")
+					li 
+						a(href="/" class="button ") Salir

@@ -1,0 +1,31 @@
+extends ../layout.jade
+block contenido
+	h1(class="centro") PANEL DE ADMINISTRACION
+	div(class="inner centro")
+				ul(class="actions" style="margin-left:55%;")
+					li 
+						a(href="prod" class="button big special") Agregar Productos
+					li 
+						a(href="/" class="button big alt") Salir
+	table(class="centro")
+		caption Productos Actuales
+		thead
+			tr
+				th #ID
+				th Nombre
+				th Descripcion
+				th Precio
+				th Imagenes
+				th Eliminar
+		tbody
+			each product in products 
+				tr
+					td= product.id
+					td= product.title
+					td= product.description
+					td= product.pricing
+					td
+						a(href="#{product.imageUrl}") Ver Imagen
+					td Eliminar
+
+

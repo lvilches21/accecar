@@ -1,0 +1,137 @@
+doctype html
+html
+	head
+		title ACCECAR Accesorios Automotrices
+		meta(http-equiv="content-type" content="text/html; charset=utf-8")
+		meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+		meta(name="description" content="")
+		meta(name="keywords" content="")
+		script(src="/js/jquery.min.js")
+		script(src="/js/skel.min.js")
+		script(src="/js/skel-layers.min.js")
+		script(src="/js/init.js")
+		script(src="/js/efecto.js")
+		noscript
+		//link(rel="stylesheet" href="/css/skel.css")
+		link(rel="stylesheet" href="/css/style-xlarge.css")
+		link(rel="stylesheet" href="/css/style.css")
+
+	body(id="top")
+		header(id="header" class="skel-layers-fixed")
+			h1 
+				a(href="#banner") AcceCar
+			nav(id="nav" class="fade")
+				ul
+					li 
+						a(href="#banner") Inicio 
+					li 
+						a(href="#two") Productos 
+					li 	
+						a(href="#three") Contacto 
+		<!-- Banner -->
+		section(id="banner")
+			div(class="inner")
+				h2(class="fade") ACCECAR
+				p(class="fade") Accesorios Automotrices
+				ul(class="actions fadel")
+					li 
+						a(href="#two" class="button big special") Productos
+					li 
+						a(href="#three" class="button big alt") Contacto
+		<!-- One -->
+		section(id="one" class="wrapper style1")
+			header(class="major")
+				h2(class="fade") Acerca de Nosotros
+				p(class="fade") Contamos con variedad de productos de accesorios para vehiculos.
+			div(class="container")
+				div(class="row")
+					div(class="4u")
+						section(class="special box fadel")
+							i(class="icon fa-area-chart major")
+							h3 Los Mejores Precios
+							p Productos de precios economicos pero de gran calidad, somos la alternativa perfecta en precio calidad
+					div(class="4u")
+						section(class="special box fadel")
+							i(class="icon fa-refresh major")
+							h3 Productos Nuevos Constantemente
+							p traemos productos nuevos constantemente para tener una mejor variedad a nuestros clientes.
+					div(class="4u")
+						section(class="special box fadel")
+							i(class="icon fa-cog major")
+							h3 Compromiso
+							p Nuestro compromiso es siempre entregar un buen servicio y un producto de calidad.
+							p(id="productos")
+		<!-- Two -->
+		section(id="two" class="wrapper style2")
+			header(class="major")
+				h2 Nuestros Productos
+				p Productos de exelente calidad.
+			div(class="container inne")
+				div(class="row")
+					div(class="6uss")
+						section(class="special")
+							each product in products
+								div(class="productoss")
+									h3= product.title
+									img(src="#{product.imageUrl}" class="tamaño")
+									p(class="centrartexto") #[small #{product.description}]
+									p(class="centrartexto" style="margin-top:1em;") #[small Precio: $ #{product.pricing}.-]
+		<!-- Three -->
+		section(id="three" class="wrapper style1")
+			div(class="container")
+				div(class="row")
+					div(class="8u")
+						section
+							h2 Formulario de Contacto
+							form
+								div
+									label(style="margin-top:1.5em;") NOMBRE
+									input(type="text" name="nombre" placeholder="Nombre" required)
+								div
+									label(style="margin-top:1.5em;") CORREO
+									input(type="email" name="correo" placeholder="Correo Electronico" required)
+								div
+									label(style="margin-top:1.5em;") ASUNTO
+									input(type="text" name="asunto" placeholder="Asunto" required)
+								div
+									label(style="margin-top:1.5em;") MENSAJE
+									textarea(name="mensaje" placeholder="Mensaje" required)
+								div
+									input(type="submit" value="Enviar" style="margin-top:1.5em;")
+		<!-- Footer -->
+		footer(id="footer")
+			div(class="container")
+				div(class="row double")
+					div(class="6u")
+						div(class="row collapse-at-2")
+							div(class="8u")
+								h3 Contactanos
+								ul(class="alt delin")
+									li Telefono: +56 9 1234 5678
+									li Whatsapp: +56 9 1234 5678
+									li 
+										a(href="#three") Formulario de Contacto
+									li 
+										a(href="mailto:accecar@accecar.cl") accecar@accecar.cl
+					div(class="6u")
+						h2 Siguenos en Nuestras Redes Sociales
+						ul(class="icons")
+							li 
+								a(href="#" class="icon fa-twitter") 
+									span(class="label") Twitter
+							li 
+								a(href="#" class="icon fa-facebook") 
+									span(class="label") Facebook
+							li 
+								a(href="#" class="icon fa-instagram") 
+									span(class="label") Instagram
+							li 
+								a(href="#" class="icon fa-google") 
+									span(class="label") Google+
+				ul(class="copyright")
+					li(id="by") Diseñado por: 
+						a(href="http://www.luisvilches.cl") Luis Vilches A.
+				
+			
+
+
