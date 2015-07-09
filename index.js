@@ -14,7 +14,7 @@ cloudinary.config({
 var app = express();
 /*
 mongoose.connect("mongodb://localhost/accecar");*/
-mongoose.connect("mongodb://accecar:accecar@ds051110.mongolab.com:51110/accecar");
+mongoose.connect("mongodb://lvilches21:andres2230@ds051110.mongolab.com:51110/accecar");
 
 
 app.use(bodyParser.json());
